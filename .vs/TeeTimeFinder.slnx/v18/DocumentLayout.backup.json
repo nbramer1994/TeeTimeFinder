@@ -3,64 +3,20 @@
   "WorkspaceRootPath": "C:\\ReposLocal\\TeeTimeFinder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\services\\chronogolfteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\services\\chronogolfteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\controllers\\teetimescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\controllers\\teetimescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\2106026069\\HomePage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\services\\eagleclubteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\services\\eagleclubteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1272E323-253C-6990-FDFF-CE6C5D828C3A}|Core\\TeeTimeFinder.Core.csproj|c:\\reposlocal\\teetimefinder\\core\\models\\courseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1272E323-253C-6990-FDFF-CE6C5D828C3A}|Core\\TeeTimeFinder.Core.csproj|solutionrelative:core\\models\\courseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ReposLocal\\TeeTimeFinder\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\services\\foreupteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\services\\foreupteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\MainLayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\pages\\teetimespage.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\pages\\teetimespage.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\services\\teetimesearchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\services\\teetimesearchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\pages\\teetimespage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\pages\\teetimespage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\services\\golfbackteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\services\\golfbackteetimeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\wwwroot\\favicon.svg||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\wwwroot\\favicon.svg||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,214 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GolfBackTeeTimeProvider.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\GolfBackTeeTimeProvider.cs",
-              "RelativeDocumentMoniker": "Api\\Services\\GolfBackTeeTimeProvider.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\GolfBackTeeTimeProvider.cs",
-              "RelativeToolTip": "Api\\Services\\GolfBackTeeTimeProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TeeTimesPage.razor",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor",
-              "RelativeDocumentMoniker": "Client\\Pages\\TeeTimesPage.razor",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor",
-              "RelativeToolTip": "Client\\Pages\\TeeTimesPage.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-30T16:23:20.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TeeTimeSearchService.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\TeeTimeSearchService.cs",
-              "RelativeDocumentMoniker": "Api\\Services\\TeeTimeSearchService.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\TeeTimeSearchService.cs",
-              "RelativeToolTip": "Api\\Services\\TeeTimeSearchService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TeeTimesPage.razor.css",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor.css",
-              "RelativeDocumentMoniker": "Client\\Pages\\TeeTimesPage.razor.css",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor.css",
-              "RelativeToolTip": "Client\\Pages\\TeeTimesPage.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T16:23:20.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainLayout.razor.css",
-              "DocumentMoniker": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\MainLayout.razor.css",
-              "RelativeDocumentMoniker": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\MainLayout.razor.css",
-              "ToolTip": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\MainLayout.razor.css",
-              "RelativeToolTip": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\MainLayout.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T16:23:20.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ForeUpTeeTimeProvider.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\ForeUpTeeTimeProvider.cs",
-              "RelativeDocumentMoniker": "Api\\Services\\ForeUpTeeTimeProvider.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\ForeUpTeeTimeProvider.cs",
-              "RelativeToolTip": "Api\\Services\\ForeUpTeeTimeProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "Api\\wwwroot\\css\\app.css",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "Api\\wwwroot\\css\\app.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T16:23:20.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Program.cs",
-              "RelativeDocumentMoniker": "Api\\Program.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Program.cs",
-              "RelativeToolTip": "Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Client\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "Client\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-30T16:23:20.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CourseInfo.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Core\\Models\\CourseInfo.cs",
-              "RelativeDocumentMoniker": "Core\\Models\\CourseInfo.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Core\\Models\\CourseInfo.cs",
-              "RelativeToolTip": "Core\\Models\\CourseInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EagleClubTeeTimeProvider.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\EagleClubTeeTimeProvider.cs",
-              "RelativeDocumentMoniker": "Api\\Services\\EagleClubTeeTimeProvider.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\EagleClubTeeTimeProvider.cs",
-              "RelativeToolTip": "Api\\Services\\EagleClubTeeTimeProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NavMenu.razor.css",
-              "DocumentMoniker": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor.css",
-              "RelativeDocumentMoniker": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor.css",
-              "ToolTip": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor.css",
-              "RelativeToolTip": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T16:23:20.679Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor",
-              "RelativeDocumentMoniker": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor",
-              "RelativeToolTip": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1488326225\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-30T16:23:20.657Z",
+              "Title": "favicon.svg",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\wwwroot\\favicon.svg",
+              "RelativeDocumentMoniker": "Api\\wwwroot\\favicon.svg",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\wwwroot\\favicon.svg",
+              "RelativeToolTip": "Api\\wwwroot\\favicon.svg",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKMSURBVDhPjZNLSFRhFMd/3507M/dKPsacsYelWGZZFFJRkdSmNrUoatMiKggSN2YFEUX3MvQiiBYWtFAyggoXPSGyhQuhFrXQFr7GMFOowcZMUO9MM3pPi9Eao6gf/Bcfh3PO/5yPo8jAsqxI5vtvKKXuhMPhK4jInIBlWRH5Bw0NDYOWZUVs264B0DILKEUXCCIpZOIi7uetpHpCxN8GiffU4rrThEIhXzgcXiEidbZtH/5ZQKTV\u002B72oItjSYfG5vxwneoX2/iW80dvxb4ji9D4BIBAIeBsbG4fSOXJWzSR7qpt9D\u002BvWndpTlNXL2HCQ28PXaIuVEB2Dmsp8DiZqyN35FAFiw19IJpPcbmrq0wCq7\u002BvHd5Y\u002B2rMy5y3OcBXmqtccq9rB/uUFKI/GzfZRPhRdBhEQIRgKUlxSAoAm0uqtWNB5Yu\u002Bier5\u002BWOoWbnxAwAwQzDao3lLIobX5ePxemiImroCIzFm\u002BztT7/CPLzi8ej\u002BVxdeyu1nJjgMR3FwDl0fD4dJRHozuWACStjM/TGDlZ50tNqHuxejo\u002B\u002BZPL8wwqCvxUFPhZFfBSbIBMJti0wJjpDpJRQXfjzr6uj9u\u002BtYysCWijA4OPqzeXpVLJtE010zS9cZDM1DTa9ASLmoaOnh4cEYaySsoa30T5Mp5kPD7Ni\u002B5Rtt7qofzqO553jqQHmHExi5p8RcRNsb6y7VWtnm1ecjUdcdM7QClwhQPl8zi3o\u002BiXdREMMwvbtvv0KYfmRJSBtvlVY93O6ujLlc8WdsYcdE1RmutlV3kO20tzcXFRohBFerQ/ccE6c11EJB53xIk7EndmNSnObxIRsSwrMucWUvh2AxiGiWmYGOassjB/0yxzzPzvOWfyAyvlXYiiBFoWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-10-30T17:03:24.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomePage.razor",
-              "DocumentMoniker": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\2106026069\\HomePage.razor",
-              "RelativeDocumentMoniker": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\2106026069\\HomePage.razor",
-              "ToolTip": "C:\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\2106026069\\HomePage.razor",
-              "RelativeToolTip": "..\\..\\Users\\nicholas.bramer\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\2106026069\\HomePage.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Client\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Client\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAcAAAAAAAAAAABQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-30T16:23:20.634Z",
+              "WhenOpened": "2026-10-30T17:03:23.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TeeTimesController.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Controllers\\TeeTimesController.cs",
-              "RelativeDocumentMoniker": "Api\\Controllers\\TeeTimesController.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Controllers\\TeeTimesController.cs",
-              "RelativeToolTip": "Api\\Controllers\\TeeTimesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T16:23:20.602Z",
+              "Title": ".dockerignore",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AgIAAAMAAAAAAAAAAABAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-30T17:03:22.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ChronogolfTeeTimeProvider.cs",
-              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\ChronogolfTeeTimeProvider.cs",
-              "RelativeDocumentMoniker": "Api\\Services\\ChronogolfTeeTimeProvider.cs",
-              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\ChronogolfTeeTimeProvider.cs",
-              "RelativeToolTip": "Api\\Services\\ChronogolfTeeTimeProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T14:56:02.566Z",
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Api\\Components\\App.razor",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Components\\App.razor",
+              "RelativeToolTip": "Api\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-30T17:03:22.549Z",
               "EditorCaption": ""
             }
           ]

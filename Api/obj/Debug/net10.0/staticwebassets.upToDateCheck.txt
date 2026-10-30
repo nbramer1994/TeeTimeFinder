@@ -44,6 +44,7 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\favicon.svg
 C:\Users\nicholas.bramer\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.12\build\..\_framework\blazor.web.js
 C:\Users\nicholas.bramer\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.12\build\..\_framework\blazor.server.js
 C:\ReposLocal\TeeTimeFinder\Api\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -93,3 +94,4 @@ C:\ReposLocal\TeeTimeFinder\Api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.m
 C:\Users\nicholas.bramer\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.12\_framework\blazor.web.js
 C:\Users\nicholas.bramer\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.12\_framework\blazor.server.js
 C:\ReposLocal\TeeTimeFinder\Api\wwwroot\css\app.css
+C:\ReposLocal\TeeTimeFinder\Api\wwwroot\favicon.svg

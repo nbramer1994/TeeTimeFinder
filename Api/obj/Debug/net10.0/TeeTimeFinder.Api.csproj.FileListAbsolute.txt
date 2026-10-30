@@ -206,3 +206,5 @@ C:\ReposLocal\TeeTimeFinder\Api\obj\Debug\net10.0\ref\TeeTimeFinder.Api.dll
 C:\ReposLocal\TeeTimeFinder\Api\obj\Debug\net10.0\compressed\yzzgz2yohj-{0}-pytv06wliq-pytv06wliq.gz
 C:\ReposLocal\TeeTimeFinder\Api\obj\Debug\net10.0\compressed\p0zilpi61j-{0}-g9jgk7sv05-g9jgk7sv05.gz
 C:\ReposLocal\TeeTimeFinder\Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\ReposLocal\TeeTimeFinder\Api\obj\Debug\net10.0\TeeTimeFinder.Api.sourcelink.json
+C:\ReposLocal\TeeTimeFinder\Api\obj\Debug\net10.0\compressed\xst9h5nx2v-{0}-o3e70dcy9y-o3e70dcy9y.gz
