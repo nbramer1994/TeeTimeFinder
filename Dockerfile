@@ -5,12 +5,11 @@ COPY TeeTimeFinder.slnx ./
 COPY Api/TeeTimeFinder.Api.csproj Api/
 COPY Client/TeeTimeFinder.Client.csproj Client/
 COPY Core/TeeTimeFinder.Core.csproj Core/
-RUN dotnet restore Api/TeeTimeFinder.Api.csproj
+RUN dotnet restore
 
-COPY Api/ Api/
-COPY Client/ Client/
-COPY Core/ Core/
-RUN dotnet publish Api/TeeTimeFinder.Api.csproj -c Release -o /app/publish --no-restore
+COPY . .
+WORKDIR /src/Api
+RUN dotnet publish -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
