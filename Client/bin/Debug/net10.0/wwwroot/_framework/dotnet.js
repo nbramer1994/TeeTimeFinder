@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "TeeTimeFinder.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-O5QJnsrM1hXOvEMoVPYWOEVNz+74IOlsbr35Gk0L2gU=",
+    "hash": "sha256-nPDRCPtSuG3eWzAekOYXaLNhDEagJ5OvMXs0Arx4KG0=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.b6l13xorvf.js"
@@ -1248,8 +1248,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "TeeTimeFinder.Client.wasm",
-        "name": "TeeTimeFinder.Client.fh7jzohkf9.wasm",
-        "hash": "sha256-XeAB4q2A7q2Mk603T2BWdrSQ/X38RL07nLQWfYMFo0k=",
+        "name": "TeeTimeFinder.Client.x0wgg2d9v2.wasm",
+        "hash": "sha256-IW52rQAwEYJwOf7V3RzKxYCn1IG1THU0yStkQxt4s7o=",
         "cache": "force-cache"
       }
     ],
@@ -1262,8 +1262,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "TeeTimeFinder.Client.pdb",
-        "name": "TeeTimeFinder.Client.a13fflopme.pdb",
-        "hash": "sha256-4p+5SJjwFGTNOLlF+29rXcP10CBNjteblamHuPdW15U=",
+        "name": "TeeTimeFinder.Client.ruey54elha.pdb",
+        "hash": "sha256-TasVgKFcKEmrPDbDHIrMw9SlUvh9K/GodquFzdIpDmQ=",
         "cache": "force-cache"
       }
     ],

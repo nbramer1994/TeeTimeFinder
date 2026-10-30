@@ -46,8 +46,7 @@
               "RelativeToolTip": "Api\\Services\\TeeTimeSearchService.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAEBTwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T17:48:56.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T17:48:56.757Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-30T17:29:44.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T17:29:44.492Z"
             },
             {
               "$type": "Document",
@@ -70,7 +68,7 @@
               "RelativeDocumentMoniker": "Client\\Pages\\TeeTimesPage.razor",
               "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor",
               "RelativeToolTip": "Client\\Pages\\TeeTimesPage.razor",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAgwFgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAGMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-30T17:29:44.465Z",
               "EditorCaption": ""
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Client\\Layout\\MainLayout.razor.css",
               "ViewState": "AgIAAC8AAAAAAAAAAABAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T17:29:09.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T17:29:09.705Z"
             },
             {
               "$type": "Document",
@@ -96,7 +93,7 @@
               "RelativeDocumentMoniker": "Client\\Pages\\TeeTimesPage.razor.css",
               "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor.css",
               "RelativeToolTip": "Client\\Pages\\TeeTimesPage.razor.css",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAlwIoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAlwIIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-10-30T17:29:06.822Z",
               "EditorCaption": ""

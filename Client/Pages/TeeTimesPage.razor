@@ -80,7 +80,7 @@ else if (result is not null)
                     {
                         <tr>
                             <td class="time">@t.Time.StartTime.ToString("h:mm tt")</td>
-                            <td class="course">@t.Time.CourseName</td>
+                            <td class="course">@t.Time.CourseName @if (Flyovers.TryGetValue(t.Time.CourseId, out var flyUrl)) { <a class="flyover-link" href="@flyUrl" target="_blank" rel="noopener">&#9654; Flyover</a> }</td>
                             <td data-label="Players">@(t.Time.AvailableSpots > 0 ? t.Time.AvailableSpots.ToString() : "-")</td>
                             <td data-label="Holes">@t.Holes</td>
                             <td data-label="Price">@(t.Time.Price?.ToString("C") ?? "-")</td>
@@ -126,6 +126,20 @@ else if (result is not null)
     private void ClearAll() => selected = [];
 
     private sealed record TimeRow(TeeTime Time, string Holes);
+
+    private static readonly Dictionary<string, string> Flyovers = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["diamond-springs"] = "https://www.youtube.com/watch?v=tPtyx5ZHzXc&list=PLVJVLrzAh7Rmu4CE5NrxgeFybqb7hG3bm",
+        ["kaufman"] = "https://www.youtube.com/watch?v=Q2IB4-4hujs",
+        ["scott-lake"] = "https://www.youtube.com/watch?v=lTfiENohJeE",
+        ["mines"] = "https://www.youtube.com/watch?v=SlidBFDN7Vo",
+        ["pigeon-creek"] = "https://www.youtube.com/watch?v=6kXsbaB2ox8",
+        ["pines"] = "https://www.youtube.com/watch?v=T7IFEiLPxl8",
+        ["quail-ridge"] = "https://www.youtube.com/watch?v=RSWRww7WY4A",
+        ["the-meadows"] = "https://www.youtube.com/watch?v=yyrjcfYbxxY",
+        ["ravines"] = "https://www.youtube.com/watch?v=E8JDFTMYwGM",
+        ["thornapple-pointe"] = "https://www.youtube.com/watch?v=TpbZoMq8PTU"
+    };
 
     private List<TimeRow> FilteredTimes()
     {

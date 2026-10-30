@@ -133,6 +133,24 @@
     font-size: .9rem;
 }
 
+.flyover-link {
+    display: inline-block;
+    margin-left: .5rem;
+    padding: .1rem .6rem;
+    border: 1px solid #778FB5;
+    border-radius: 999px;
+    color: #4f6791;
+    font-size: .8rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.flyover-link:hover {
+    background: #778FB5;
+    color: #fff;
+}
+
 .book-link:hover {
     background: #5f7aa3;
     color: #fff;

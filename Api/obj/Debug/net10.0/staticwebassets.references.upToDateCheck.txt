@@ -30,3 +30,11 @@ C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\ReposLocal\TeeTimeFinder\Client\obj\Debug\net10.0\staticwebassets.build.json

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeeTimeFinder.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90526a70c231d4dafbf7d8db0d0547a29ba8b057")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f9e494d7c1e998f2f2fe2e9f00580f5f2018f7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeeTimeFinder.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeeTimeFinder.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
