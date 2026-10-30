@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\ReposLocal\\TeeTimeFinder\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +42,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Program.cs",
+              "RelativeDocumentMoniker": "Api\\Program.cs",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Program.cs",
+              "RelativeToolTip": "Api\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T17:05:31.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Program.cs",
+              "RelativeDocumentMoniker": "Client\\Program.cs",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Program.cs",
+              "RelativeToolTip": "Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T17:05:20.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "favicon.svg",
               "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\wwwroot\\favicon.svg",
               "RelativeDocumentMoniker": "Api\\wwwroot\\favicon.svg",
@@ -47,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Client\\Layout\\MainLayout.razor",
@@ -60,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\.dockerignore",
               "RelativeDocumentMoniker": ".dockerignore",
@@ -73,13 +107,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Components\\App.razor",
               "RelativeDocumentMoniker": "Api\\Components\\App.razor",
               "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Components\\App.razor",
               "RelativeToolTip": "Api\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-30T17:03:22.549Z",
               "EditorCaption": ""
