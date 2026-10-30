@@ -79,12 +79,12 @@ else if (result is not null)
                     @foreach (var t in times)
                     {
                         <tr>
-                            <td class="time">@t.StartTime.ToString("h:mm tt")</td>
-                            <td>@t.CourseName</td>
-                            <td>@(t.AvailableSpots > 0 ? t.AvailableSpots.ToString() : "-")</td>
-                            <td>@(t.Holes > 0 ? t.Holes.ToString() : "-")</td>
-                            <td>@(t.Price?.ToString("C") ?? "-")</td>
-                            <td class="text-end"><a class="book-link" href="@t.BookingUrl" target="_blank" rel="noopener">Book</a></td>
+                            <td class="time">@t.Time.StartTime.ToString("h:mm tt")</td>
+                            <td class="course">@t.Time.CourseName</td>
+                            <td data-label="Players">@(t.Time.AvailableSpots > 0 ? t.Time.AvailableSpots.ToString() : "-")</td>
+                            <td data-label="Holes">@t.Holes</td>
+                            <td data-label="Price">@(t.Time.Price?.ToString("C") ?? "-")</td>
+                            <td class="text-end book-cell"><a class="book-link" href="@t.Time.BookingUrl" target="_blank" rel="noopener">Book</a></td>
                         </tr>
                     }
                 </tbody>
@@ -125,13 +125,22 @@ else if (result is not null)
 
     private void ClearAll() => selected = [];
 
-    private List<TeeTime> FilteredTimes()
+    private sealed record TimeRow(TeeTime Time, string Holes);
+
+    private List<TimeRow> FilteredTimes()
     {
         var from = fromTime ?? TimeOnly.MinValue;
         var to = toTime ?? TimeOnly.MaxValue;
         return result!.TeeTimes
             .Where(x => TimeOnly.FromDateTime(x.StartTime) >= from && TimeOnly.FromDateTime(x.StartTime) <= to)
-            .OrderBy(x => x.StartTime)
+            .GroupBy(x => (x.CourseName, x.StartTime))
+            .Select(g =>
+            {
+                var holes = g.Select(x => x.Holes).Where(h => h > 0).Distinct().Order().ToList();
+                var first = g.OrderBy(x => x.Price ?? decimal.MaxValue).First();
+                return new TimeRow(first, holes.Count == 0 ? "-" : string.Join("/", holes));
+            })
+            .OrderBy(r => r.Time.StartTime)
             .ToList();
     }
 

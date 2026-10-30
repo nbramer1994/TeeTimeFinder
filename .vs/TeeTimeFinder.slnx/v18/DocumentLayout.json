@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\ReposLocal\\TeeTimeFinder\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\pages\\teetimespage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\pages\\teetimespage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\pages\\teetimespage.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\pages\\teetimespage.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|c:\\reposlocal\\teetimefinder\\client\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{53AFA508-05AE-D4D2-1D48-0D58CF3F2889}|Client\\TeeTimeFinder.Client.csproj|solutionrelative:client\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ReposLocal\\TeeTimeFinder\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|c:\\reposlocal\\teetimefinder\\api\\services\\teetimesearchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83FA3DB9-CA1F-6512-B067-7D3BC9A71BD6}|Api\\TeeTimeFinder.Api.csproj|solutionrelative:api\\services\\teetimesearchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,29 +38,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "TeeTimeSearchService.cs",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\TeeTimeSearchService.cs",
+              "RelativeDocumentMoniker": "Api\\Services\\TeeTimeSearchService.cs",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Api\\Services\\TeeTimeSearchService.cs",
+              "RelativeToolTip": "Api\\Services\\TeeTimeSearchService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAEBTwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T17:48:56.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-30T17:29:44.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeeTimesPage.razor",
+              "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\TeeTimesPage.razor",
+              "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor",
+              "RelativeToolTip": "Client\\Pages\\TeeTimesPage.razor",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwFgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-30T17:29:44.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainLayout.razor.css",
               "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "Client\\Layout\\MainLayout.razor.css",
               "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Layout\\MainLayout.razor.css",
               "RelativeToolTip": "Client\\Layout\\MainLayout.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAABAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T17:29:09.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T17:29:09.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TeeTimesPage.razor.css",
               "DocumentMoniker": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor.css",
               "RelativeDocumentMoniker": "Client\\Pages\\TeeTimesPage.razor.css",
               "ToolTip": "C:\\ReposLocal\\TeeTimeFinder\\Client\\Pages\\TeeTimesPage.razor.css",
               "RelativeToolTip": "Client\\Pages\\TeeTimesPage.razor.css",
-              "ViewState": "AgIAANsAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAlwIoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-30T17:29:06.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T17:29:06.822Z"
             }
           ]
         }

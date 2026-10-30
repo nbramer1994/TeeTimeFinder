@@ -59,14 +59,20 @@ public class TeeTimeSearchService(IEnumerable<ITeeTimeProvider> providers) : ITe
         ,
         new()
         {
-            // ExternalId = Eagle database name, ScheduleId = tee price class id, BookingClassId = carriage id
+            Id = "ravines", Name = "The Ravines", System = BookingSystem.GolfBack,
+            ScheduleId = "4d6e8bf7-f75d-4719-8d3b-c5dbcd55acdf",
+            BookingUrl = "https://golfback.com/#/course/4d6e8bf7-f75d-4719-8d3b-c5dbcd55acdf"
+        },
+        new()
+        {
+            // ExternalId = Eagle database name
             Id = "pigeon-creek", Name = "Pigeon Creek", System = BookingSystem.EagleClub,
             ExternalId = "pigeoncreek20260101", ScheduleId = "85", BookingClassId = "95",
             BookingUrl = "https://player.eagleclubsystems.online/#/tee-slot?dbname=pigeoncreek20260101"
         }
     ];
 
-    public IReadOnlyList<CourseInfo> GetCourses() => Courses;
+    public IReadOnlyList<CourseInfo> GetCourses() => Courses.OrderBy(c => c.Name, StringComparer.OrdinalIgnoreCase).ToList();
 
     public async Task<TeeTimeSearchResult> SearchAsync(DateOnly date, int players, IEnumerable<string>? courseIds, CancellationToken cancellationToken = default)
     {
