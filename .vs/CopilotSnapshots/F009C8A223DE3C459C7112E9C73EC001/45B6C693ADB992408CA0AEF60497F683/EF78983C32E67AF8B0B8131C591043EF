@@ -1,0 +1,12 @@
+﻿using TeeTimeFinder.Models;
+
+namespace TeeTimeFinder.Core.Interfaces;
+
+/// <summary>
+/// Placeholder service contract. Interfaces live in Core so both the Api (implementation)
+/// and any other project can depend on them without referencing the Api.
+/// </summary>
+public interface ISampleService
+{
+    Task<IReadOnlyList<SampleItem>> GetItemsAsync();
+}

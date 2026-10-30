@@ -1,0 +1,17 @@
+<Solution>
+  <Configurations>
+	<BuildType Name="Debug" />
+	<BuildType Name="Development" />
+	<BuildType Name="QA" />
+	<BuildType Name="Release" />
+  </Configurations>
+  <Folder Name="/Api/">
+	<Project Path="Api/TeeTimeFinder.Api.csproj" />
+  </Folder>
+  <Folder Name="/Client/">
+	<Project Path="Client/TeeTimeFinder.Client.csproj" />
+  </Folder>
+  <Folder Name="/Core/">
+	<Project Path="Core/TeeTimeFinder.Core.csproj" />
+  </Folder>
+</Solution>

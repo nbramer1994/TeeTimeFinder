@@ -1,0 +1,62 @@
+﻿using TeeTimeFinder.Api.Services;
+using TeeTimeFinder.Core.Interfaces;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// TODO: Add authentication here (e.g. AddMicrosoftIdentityWebAppAuthentication) if your app needs it.
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddHealthChecks();
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddHttpClient<ITeeTimeProvider, ChronogolfTeeTimeProvider>(ConfigureProviderClient);
+builder.Services.AddHttpClient<ITeeTimeProvider, ForeUpTeeTimeProvider>(ConfigureProviderClient);
+builder.Services.AddHttpClient<ITeeTimeProvider, TeeItUpTeeTimeProvider>(ConfigureProviderClient);
+builder.Services.AddHttpClient<ITeeTimeProvider, GolfBackTeeTimeProvider>(ConfigureProviderClient);
+builder.Services.AddHttpClient<ITeeTimeProvider, CpsGolfTeeTimeProvider>(ConfigureProviderClient);
+builder.Services.AddScoped<ITeeTimeSearchService, TeeTimeSearchService>();
+
+static void ConfigureProviderClient(HttpClient client)
+{
+    client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36");
+    client.DefaultRequestHeaders.Accept.ParseAdd("application/json");
+}
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+
+var app = builder.Build();
+
+// TODO: If hosting under a sub path, call app.UsePathBase("/yourpath") here and update <base href> in App.razor.
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseWebAssemblyDebugging();
+}
+else
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.MapStaticAssets();
+
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseAntiforgery();
+
+app.MapHealthChecks("/health/ready");
+
+app.MapRazorComponents<TeeTimeFinder.Api.Components.App>()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(TeeTimeFinder.Client._Imports).Assembly);
+
+app.MapControllers();
+
+app.Run();

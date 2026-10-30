@@ -1,0 +1,101 @@
+﻿using TeeTimeFinder.Core.Interfaces;
+using TeeTimeFinder.Models;
+
+namespace TeeTimeFinder.Api.Services;
+
+public class TeeTimeSearchService(IEnumerable<ITeeTimeProvider> providers) : ITeeTimeSearchService
+{
+    private static readonly IReadOnlyList<CourseInfo> Courses =
+    [
+        new()
+        {
+            Id = "mines", Name = "The Mines", System = BookingSystem.Chronogolf,
+            ExternalId = "18604", ScheduleId = "22220",
+            BookingUrl = "https://www.chronogolf.com/club/18604"
+        },
+        new()
+        {
+            Id = "diamond-springs", Name = "Diamond Springs", System = BookingSystem.ForeUp,
+            ExternalId = "21668", ScheduleId = "8514", BookingClassId = "10884",
+            BookingUrl = "https://foreupsoftware.com/index.php/booking/21668/8514#teetimes"
+        }
+        ,
+        new()
+        {
+            Id = "kaufman", Name = "Kaufman", System = BookingSystem.ForeUp,
+            ExternalId = "21735", ScheduleId = "8723", BookingClassId = "11186",
+            BookingUrl = "https://foreupsoftware.com/index.php/booking/21735/8723"
+        },
+        new()
+        {
+            Id = "thornapple-pointe", Name = "Thornapple Pointe", System = BookingSystem.GolfBack,
+            ScheduleId = "f752a0e6-4527-4a85-b505-c942b474e3a4",
+            BookingUrl = "https://golfback.com/#/course/f752a0e6-4527-4a85-b505-c942b474e3a4"
+        },
+        new()
+        {
+            Id = "pines", Name = "Pines", System = BookingSystem.CpsGolf,
+            Alias = "thepines", ExternalId = "1", ScheduleId = "2",
+            BookingUrl = "https://thepines.cps.golf/onlineresweb/search-teetime"
+        },
+        new()
+        {
+            Id = "scott-lake", Name = "Scott Lake", System = BookingSystem.CpsGolf,
+            Alias = "scottlake", ExternalId = "2", ScheduleId = "12,22,13,14",
+            BookingUrl = "https://scottlake.cps.golf/onlineresweb/search-teetime"
+        },
+        new()
+        {
+            Id = "the-meadows", Name = "The Meadows", System = BookingSystem.TeeItUp,
+            Alias = "grand-valley-state-university", ScheduleId = "15788",
+            BookingUrl = "https://grand-valley-state-university.book.teeitup.golf/?course=15788"
+        },
+        new()
+        {
+            Id = "quail-ridge", Name = "Quail Ridge", System = BookingSystem.GolfBack,
+            ScheduleId = "a4b20fc1-bc9c-48f7-b479-07d12747e344",
+            BookingUrl = "https://golfback.com/#/course/a4b20fc1-bc9c-48f7-b479-07d12747e344"
+        }
+        // TODO: Pigeon Creek (Eagle Club Systems) still needs a provider.
+    ];
+
+    public IReadOnlyList<CourseInfo> GetCourses() => Courses;
+
+    public async Task<TeeTimeSearchResult> SearchAsync(DateOnly date, int players, IEnumerable<string>? courseIds, CancellationToken cancellationToken = default)
+    {
+        var selected = courseIds?.ToHashSet(StringComparer.OrdinalIgnoreCase);
+        var targets = Courses.Where(c => selected is null || selected.Count == 0 || selected.Contains(c.Id)).ToList();
+
+        var tasks = targets.Select(async course =>
+        {
+            var provider = providers.FirstOrDefault(p => p.System == course.System);
+            if (provider is null)
+            {
+                return (course, times: (IReadOnlyList<TeeTime>)[], error: "No provider for " + course.System);
+            }
+
+            try
+            {
+                return (course, times: await provider.GetTeeTimesAsync(course, date, players, cancellationToken), error: (string?)null);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                return (course, times: (IReadOnlyList<TeeTime>)[], error: ex.Message);
+            }
+        });
+
+        var outcomes = await Task.WhenAll(tasks);
+        var result = new TeeTimeSearchResult();
+        foreach (var o in outcomes)
+        {
+            result.TeeTimes.AddRange(o.times.Where(t => t.AvailableSpots >= players));
+            if (o.error is not null)
+            {
+                result.Errors.Add(new CourseSearchError { CourseName = o.course.Name, Message = o.error });
+            }
+        }
+
+        result.TeeTimes = result.TeeTimes.OrderBy(t => t.StartTime).ToList();
+        return result;
+    }
+}

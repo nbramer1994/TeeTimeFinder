@@ -1,0 +1,77 @@
+﻿using System.Globalization;
+using System.Text.Json;
+using TeeTimeFinder.Core.Interfaces;
+using TeeTimeFinder.Models;
+
+namespace TeeTimeFinder.Api.Services;
+
+public class ChronogolfTeeTimeProvider(HttpClient http) : ITeeTimeProvider
+{
+    public BookingSystem System => BookingSystem.Chronogolf;
+
+    public async Task<IReadOnlyList<TeeTime>> GetTeeTimesAsync(CourseInfo course, DateOnly date, int players, CancellationToken cancellationToken = default)
+    {
+        var results = new List<TeeTime>();
+        for (var page = 1; page <= 5; page++)
+        {
+            var url = "https://www.chronogolf.com/marketplace/v2/teetimes" +
+                      $"?start_date={date:yyyy-MM-dd}&course_ids={course.ScheduleId}&holes=9,18&page={page}";
+
+            using var response = await http.GetAsync(url, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            using var doc = await JsonDocument.ParseAsync(await response.Content.ReadAsStreamAsync(cancellationToken), cancellationToken: cancellationToken);
+
+            if (!doc.RootElement.TryGetProperty("teetimes", out var teeTimes) ||
+                teeTimes.ValueKind != JsonValueKind.Array ||
+                teeTimes.GetArrayLength() == 0)
+            {
+                break;
+            }
+
+            foreach (var item in teeTimes.EnumerateArray())
+            {
+                var time = item.TryGetProperty("start_time", out var t) ? t.GetString() : null;
+                if (time is null || !DateTime.TryParse($"{date:yyyy-MM-dd} {time}", CultureInfo.InvariantCulture, DateTimeStyles.None, out var start))
+                {
+                    continue;
+                }
+
+                var max = JsonHelper.GetInt(item, "max_player_size");
+                var min = JsonHelper.GetInt(item, "min_player_size");
+                var free = JsonHelper.GetInt(item, "free_spots");
+                var spots = free > 0 ? free : max;
+                if (spots < players || (min > players && min > 0))
+                {
+                    continue;
+                }
+
+                decimal? price = null;
+                if (item.TryGetProperty("default_price", out var dp) && dp.ValueKind == JsonValueKind.Object)
+                {
+                    price = JsonHelper.GetDecimal(dp, "green_fee");
+                }
+
+                results.Add(new TeeTime
+                {
+                    CourseId = course.Id,
+                    CourseName = course.Name,
+                    StartTime = start,
+                    AvailableSpots = spots,
+                    Holes = JsonHelper.GetInt(item, "default_price") > 0 ? 0 : (item.TryGetProperty("default_price", out var d2) && d2.ValueKind == JsonValueKind.Object ? JsonHelper.GetInt(d2, "holes") : 0),
+                    Price = price,
+                    BookingUrl = course.BookingUrl
+                });
+            }
+
+            if (!doc.RootElement.TryGetProperty("pages", out var pages) || pages.ValueKind != JsonValueKind.Number || page >= pages.GetInt32())
+            {
+                if (!doc.RootElement.TryGetProperty("pages", out _))
+                {
+                    break;
+                }
+            }
+        }
+
+        return results;
+    }
+}

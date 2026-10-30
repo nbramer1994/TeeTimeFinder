@@ -1,0 +1,29 @@
+﻿namespace TeeTimeFinder.Models;
+
+public enum BookingSystem
+{
+    Chronogolf,
+    ForeUp,
+    CpsGolf,
+    TeeItUp
+}
+
+public class CourseInfo
+{
+    public string Id { get; set; } = string.Empty;
+
+    public string Name { get; set; } = string.Empty;
+
+    public BookingSystem System { get; set; }
+
+    /// <summary>ForeUP: course id. Chronogolf: club id.</summary>
+    public string ExternalId { get; set; } = string.Empty;
+
+    /// <summary>ForeUP: schedule (tee sheet) id. Chronogolf: course id.</summary>
+    public string ScheduleId { get; set; } = string.Empty;
+
+    /// <summary>ForeUP: booking class id (public class).</summary>
+    public string? BookingClassId { get; set; }
+
+    public string BookingUrl { get; set; } = string.Empty;
+}

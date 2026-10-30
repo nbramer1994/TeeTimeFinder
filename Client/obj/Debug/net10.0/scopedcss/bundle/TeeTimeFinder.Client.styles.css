@@ -1,0 +1,197 @@
+/* /Layout/MainLayout.razor.rz.scp.css */
+.app-shell[b-84u8vi5k69] {
+    min-height: 100vh;
+    background: #eef1f6;
+}
+
+.app-header[b-84u8vi5k69] {
+    background: linear-gradient(135deg, #778FB5 0%, #4f6791 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(40, 55, 85, 0.25);
+}
+
+.app-header-inner[b-84u8vi5k69] {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+}
+
+.app-logo[b-84u8vi5k69] {
+    font-size: 1.6rem;
+}
+
+.app-title[b-84u8vi5k69] {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+.app-main[b-84u8vi5k69] {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+}
+
+#blazor-error-ui[b-84u8vi5k69] {
+    color-scheme: light only;
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss[b-84u8vi5k69] {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+/* /Pages/TeeTimesPage.razor.rz.scp.css */
+.panel[b-iea7xkqege] {
+    background: #fff;
+    border: 1px solid #d5dbe6;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(60, 80, 120, 0.08);
+    margin-bottom: 1.25rem;
+}
+
+.filters[b-iea7xkqege] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1.25rem;
+}
+
+.field label[b-iea7xkqege] {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #5b6578;
+    margin-bottom: .25rem;
+}
+
+.search-btn[b-iea7xkqege] {
+    padding: .5rem 1.75rem;
+    font-weight: 600;
+}
+
+.courses-header[b-iea7xkqege] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: .6rem;
+}
+
+.courses-title[b-iea7xkqege] {
+    font-weight: 600;
+    color: #3d4a63;
+}
+
+.courses-actions[b-iea7xkqege] {
+    display: flex;
+    gap: .5rem;
+}
+
+.chips[b-iea7xkqege] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.chip[b-iea7xkqege] {
+    border: 1px solid #b9c4d8;
+    background: #f3f5f9;
+    color: #4a5568;
+    border-radius: 999px;
+    padding: .35rem .9rem;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+}
+
+.chip:hover[b-iea7xkqege] {
+    border-color: #778FB5;
+}
+
+.chip-on[b-iea7xkqege] {
+    background: #778FB5;
+    border-color: #6580a8;
+    color: #fff;
+}
+
+.status[b-iea7xkqege] {
+    color: #5b6578;
+    margin: .5rem 0 .75rem;
+}
+
+.results[b-iea7xkqege] {
+    background: #fff;
+    border: 1px solid #d5dbe6;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(60, 80, 120, 0.08);
+}
+
+.results-table[b-iea7xkqege] {
+    margin: 0;
+}
+
+.results-table thead th[b-iea7xkqege] {
+    background: #e4e9f1;
+    color: #3d4a63;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    border-bottom: 2px solid #778FB5;
+    padding: .7rem 1rem;
+}
+
+.results-table td[b-iea7xkqege] {
+    padding: .6rem 1rem;
+    vertical-align: middle;
+}
+
+.results-table tbody tr:nth-child(even)[b-iea7xkqege] {
+    background: #f6f8fb;
+}
+
+.results-table tbody tr:hover[b-iea7xkqege] {
+    background: #e9eef6;
+}
+
+.time[b-iea7xkqege] {
+    font-weight: 600;
+    color: #3d4a63;
+    white-space: nowrap;
+}
+
+.book-link[b-iea7xkqege] {
+    display: inline-block;
+    background: #778FB5;
+    color: #fff;
+    text-decoration: none;
+    padding: .25rem .9rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.book-link:hover[b-iea7xkqege] {
+    background: #5f7aa3;
+    color: #fff;
+}

@@ -1,0 +1,11 @@
+C:\Repos\BlazorTemplate\Core\bin\Debug\net10.0\BlazorTemplate.Core.deps.json
+C:\Repos\BlazorTemplate\Core\bin\Debug\net10.0\BlazorTemplate.Core.dll
+C:\Repos\BlazorTemplate\Core\bin\Debug\net10.0\BlazorTemplate.Core.pdb
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\BlazorTemplate.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\BlazorTemplate.Core.AssemblyInfoInputs.cache
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\BlazorTemplate.Core.AssemblyInfo.cs
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\BlazorTemplate.Core.csproj.CoreCompileInputs.cache
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\BlazorTemplate.Core.dll
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\refint\BlazorTemplate.Core.dll
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\BlazorTemplate.Core.pdb
+C:\Repos\BlazorTemplate\Core\obj\Debug\net10.0\ref\BlazorTemplate.Core.dll

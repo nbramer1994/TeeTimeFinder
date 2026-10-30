@@ -1,0 +1,7 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Tee Time Finder</h1>
+
+<p>Search tee times across your courses on the <a href="teetimes">Tee Times</a> page.</p>

@@ -1,0 +1,31 @@
+﻿@page "/sample"
+@inject HttpClient Http
+
+<PageTitle>Sample</PageTitle>
+
+<h1>Sample</h1>
+
+@* Example of calling the Api project's SampleController from the Client. *@
+
+@if (items is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>@item.Id - @item.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private SampleItem[]? items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await Http.GetFromJsonAsync<SampleItem[]>("api/sample");
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "AILJ8vVSQqk=",
+  "success": true,
+  "projectFilePath": "C:\\ReposLocal\\TeeTimeFinder\\Api\\TeeTimeFinder.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicholas.bramer\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.12\\microsoft.aspnetcore.app.internal.assets.10.0.12.nupkg.sha512",
+    "C:\\Users\\nicholas.bramer\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.13\\microsoft.aspnetcore.components.webassembly.10.0.13.nupkg.sha512",
+    "C:\\Users\\nicholas.bramer\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.13\\microsoft.aspnetcore.components.webassembly.server.10.0.13.nupkg.sha512",
+    "C:\\Users\\nicholas.bramer\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.13\\microsoft.jsinterop.webassembly.10.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,26 @@
+﻿using TeeTimeFinder.Core.Interfaces;
+using TeeTimeFinder.Models;
+
+namespace TeeTimeFinder.Api.Services;
+
+/// <summary>
+/// Placeholder service implementation.
+/// 1. Define the contract in Core/Interfaces.
+/// 2. Implement it here in Api/Services.
+/// 3. Register it in Program.cs (builder.Services.AddSingleton / AddScoped).
+/// 4. Inject it into a controller (see Controllers/SampleController.cs).
+/// </summary>
+public class SampleService : ISampleService
+{
+    public Task<IReadOnlyList<SampleItem>> GetItemsAsync()
+    {
+        IReadOnlyList<SampleItem> items =
+        [
+            new SampleItem { Id = 1, Name = "First item" },
+            new SampleItem { Id = 2, Name = "Second item" },
+            new SampleItem { Id = 3, Name = "Third item" }
+        ];
+
+        return Task.FromResult(items);
+    }
+}

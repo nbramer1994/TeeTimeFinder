@@ -1,0 +1,22 @@
+﻿using TeeTimeFinder.Core.Interfaces;
+using TeeTimeFinder.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace TeeTimeFinder.Api.Controllers;
+
+/// <summary>
+/// Placeholder controller. The Client project calls this through HttpClient
+/// (see Client/Pages/SamplePage.razor). Copy this pattern for your own endpoints:
+/// inject a service from Core.Interfaces and expose it over HTTP.
+/// Add [Authorize] here once authentication is configured in Program.cs.
+/// </summary>
+[ApiController]
+[Route("api/[controller]")]
+public class SampleController(ISampleService sampleService) : ControllerBase
+{
+    [HttpGet]
+    public async Task<ActionResult<IReadOnlyList<SampleItem>>> Get()
+    {
+        return Ok(await sampleService.GetItemsAsync());
+    }
+}

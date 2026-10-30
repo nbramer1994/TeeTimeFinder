@@ -1,0 +1,12 @@
+﻿namespace TeeTimeFinder.Models;
+
+/// <summary>
+/// Placeholder model shared by the Api and Client projects.
+/// Replace or delete it and add your own models to this folder.
+/// </summary>
+public class SampleItem
+{
+    public int Id { get; set; }
+
+    public string Name { get; set; } = string.Empty;
+}

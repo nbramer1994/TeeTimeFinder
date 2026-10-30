@@ -1,0 +1,109 @@
+﻿@page "/teetimes"
+@inject HttpClient Http
+
+<PageTitle>Tee Time Finder</PageTitle>
+
+<h1>Tee Time Finder</h1>
+
+<div class="row g-2 mb-3 align-items-end">
+    <div class="col-auto">
+        <label class="form-label">Date</label>
+        <input type="date" class="form-control" @bind="date" />
+    </div>
+    <div class="col-auto">
+        <label class="form-label">Players</label>
+        <select class="form-select" @bind="players">
+            @for (var i = 1; i <= 4; i++)
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" @onclick="SearchAsync" disabled="@loading">Search</button>
+    </div>
+</div>
+
+@if (courses.Count > 0)
+{
+    <div class="mb-3">
+        @foreach (var c in courses)
+        {
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="c-@c.Id" checked="@selected.Contains(c.Id)" @onchange="e => Toggle(c.Id, (bool)e.Value!)" />
+                <label class="form-check-label" for="c-@c.Id">@c.Name</label>
+            </div>
+        }
+    </div>
+}
+
+@if (loading)
+{
+    <p><em>Searching...</em></p>
+}
+else if (result is not null)
+{
+    @foreach (var err in result.Errors)
+    {
+        <div class="alert alert-warning">@err.CourseName: @err.Message</div>
+    }
+
+    @if (result.TeeTimes.Count == 0)
+    {
+        <p>No tee times found.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead><tr><th>Time</th><th>Course</th><th>Spots</th><th>Holes</th><th>Price</th><th></th></tr></thead>
+            <tbody>
+                @foreach (var t in result.TeeTimes)
+                {
+                    <tr>
+                        <td>@t.StartTime.ToString("h:mm tt")</td>
+                        <td>@t.CourseName</td>
+                        <td>@t.AvailableSpots</td>
+                        <td>@(t.Holes > 0 ? t.Holes : "")</td>
+                        <td>@(t.Price?.ToString("C"))</td>
+                        <td><a href="@t.BookingUrl" target="_blank" rel="noopener">Book</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+
+@code {
+    private DateTime date = DateTime.Today;
+    private int players = 4;
+    private bool loading;
+    private List<CourseInfo> courses = [];
+    private HashSet<string> selected = [];
+    private TeeTimeSearchResult? result;
+
+    protected override async Task OnInitializedAsync()
+    {
+        courses = await Http.GetFromJsonAsync<List<CourseInfo>>("api/teetimes/courses") ?? [];
+        selected = courses.Select(c => c.Id).ToHashSet();
+    }
+
+    private void Toggle(string id, bool on)
+    {
+        if (on) selected.Add(id); else selected.Remove(id);
+    }
+
+    private async Task SearchAsync()
+    {
+        loading = true;
+        try
+        {
+            var query = $"api/teetimes?date={date:yyyy-MM-dd}&players={players}" +
+                        string.Concat(selected.Select(s => $"&courses={Uri.EscapeDataString(s)}"));
+            result = await Http.GetFromJsonAsync<TeeTimeSearchResult>(query);
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+}

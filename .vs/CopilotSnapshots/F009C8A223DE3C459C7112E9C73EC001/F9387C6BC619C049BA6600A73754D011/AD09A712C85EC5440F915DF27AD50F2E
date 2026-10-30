@@ -1,0 +1,77 @@
+﻿using System.Globalization;
+using System.Text.Json;
+using TeeTimeFinder.Core.Interfaces;
+using TeeTimeFinder.Models;
+
+namespace TeeTimeFinder.Api.Services;
+
+public class ForeUpTeeTimeProvider(HttpClient http) : ITeeTimeProvider
+{
+    private static readonly SemaphoreSlim Gate = new(1, 1);
+
+    public BookingSystem System => BookingSystem.ForeUp;
+
+    public async Task<IReadOnlyList<TeeTime>> GetTeeTimesAsync(CourseInfo course, DateOnly date, int players, CancellationToken cancellationToken = default)
+    {
+        var url = "https://foreupsoftware.com/index.php/api/booking/times" +
+                  $"?time=all&date={date:MM-dd-yyyy}&holes=all&players=0" +
+                  $"&booking_class={course.BookingClassId ?? "0"}&schedule_id={course.ScheduleId}" +
+                  $"&schedule_ids%5B%5D={course.ScheduleId}&specials_only=0&api_key=no_limits";
+
+        HttpResponseMessage response;
+        var attempt = 0;
+        await Gate.WaitAsync(cancellationToken);
+        try
+        {
+            while (true)
+            {
+                using var request = new HttpRequestMessage(HttpMethod.Get, url);
+                request.Headers.Add("Api-key", "no_limits");
+                response = await http.SendAsync(request, cancellationToken);
+                response.StatusCode != global::System.Net.HttpStatusCode.Unauthorized
+                {
+                    break;
+                }
+
+                response.Dispose();
+                await Task.Delay(300 * attempt, cancellationToken);
+            }
+        }
+        finally
+        {
+            Gate.Release();
+        }
+
+        using var _ = response;
+        response.EnsureSuccessStatusCode();
+
+        using var doc = await JsonDocument.ParseAsync(await response.Content.ReadAsStreamAsync(cancellationToken), cancellationToken: cancellationToken);
+        var results = new List<TeeTime>();
+        if (doc.RootElement.ValueKind != JsonValueKind.Array)
+        {
+            return results;
+        }
+
+        foreach (var item in doc.RootElement.EnumerateArray())
+        {
+            if (!item.TryGetProperty("time", out var timeProp) ||
+                !DateTime.TryParse(timeProp.GetString(), CultureInfo.InvariantCulture, DateTimeStyles.None, out var start))
+            {
+                continue;
+            }
+
+            results.Add(new TeeTime
+            {
+                CourseId = course.Id,
+                CourseName = course.Name,
+                StartTime = start,
+                AvailableSpots = JsonHelper.GetInt(item, "available_spots"),
+                Holes = JsonHelper.GetInt(item, "holes"),
+                Price = JsonHelper.GetDecimal(item, "green_fee"),
+                BookingUrl = course.BookingUrl
+            });
+        }
+
+        return results;
+    }
+}

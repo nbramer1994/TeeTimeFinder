@@ -1,0 +1,163 @@
+﻿@page "/"
+@page "/teetimes"
+@inject HttpClient Http
+
+<PageTitle>Tee Time Finder</PageTitle>
+
+<section class="panel">
+    <div class="filters">
+        <div class="field">
+            <label for="date">Date</label>
+            <input id="date" type="date" class="form-control" @bind="date" />
+        </div>
+        <div class="field">
+            <label for="from">From</label>
+            <input id="from" type="time" class="form-control" @bind="fromTime" />
+        </div>
+        <div class="field">
+            <label for="to">To</label>
+            <input id="to" type="time" class="form-control" @bind="toTime" />
+        </div>
+        <div class="field field-action">
+            <button class="btn btn-primary search-btn" @onclick="SearchAsync" disabled="@loading">
+                @(loading ? "Searching..." : "Search")
+            </button>
+        </div>
+    </div>
+
+    @if (courses.Count > 0)
+    {
+        <div class="courses-header">
+            <span class="courses-title">Courses (@selected.Count of @courses.Count)</span>
+            <div class="courses-actions">
+                <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="SelectAll">Select all</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="ClearAll">Remove all</button>
+            </div>
+        </div>
+        <div class="chips">
+            @foreach (var c in courses)
+            {
+                var isOn = selected.Contains(c.Id);
+                <button type="button" class="chip @(isOn ? "chip-on" : "")" @onclick="() => Toggle(c.Id)">
+                    @(isOn ? "✓ " : "")@c.Name
+                </button>
+            }
+        </div>
+    }
+</section>
+
+@if (errorMessage is not null)
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+@if (loading)
+{
+    <p class="status"><em>Searching...</em></p>
+}
+else if (result is not null)
+{
+    @foreach (var err in result.Errors)
+    {
+        <div class="alert alert-warning">@err.CourseName: @err.Message</div>
+    }
+
+    var times = FilteredTimes();
+    @if (times.Count == 0)
+    {
+        <p class="status">No tee times found for that date and time range.</p>
+    }
+    else
+    {
+        <p class="status">@times.Count tee times</p>
+        <div class="results">
+            <table class="table results-table">
+                <thead>
+                    <tr><th>Time</th><th>Course</th><th>Players</th><th>Holes</th><th>Price</th><th></th></tr>
+                </thead>
+                <tbody>
+                    @foreach (var t in times)
+                    {
+                        <tr>
+                            <td class="time">@t.StartTime.ToString("h:mm tt")</td>
+                            <td>@t.CourseName</td>
+                            <td>@(t.AvailableSpots > 0 ? t.AvailableSpots.ToString() : "-")</td>
+                            <td>@(t.Holes > 0 ? t.Holes.ToString() : "-")</td>
+                            <td>@(t.Price?.ToString("C") ?? "-")</td>
+                            <td class="text-end"><a class="book-link" href="@t.BookingUrl" target="_blank" rel="noopener">Book</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
+
+@code {
+    private DateTime date = DateTime.Today;
+    private string fromTime = "06:00";
+    private string toTime = "20:00";
+    private bool loading;
+    private List<CourseInfo> courses = [];
+    private HashSet<string> selected = [];
+    private TeeTimeSearchResult? result;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            courses = await Http.GetFromJsonAsync<List<CourseInfo>>("api/teetimes/courses") ?? [];
+            selected = courses.Select(c => c.Id).ToHashSet();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to load courses: {ex.Message}";
+        }
+    }
+
+    private void Toggle(string id)
+    {
+        if (!selected.Remove(id)) selected.Add(id);
+    }
+
+    private void SelectAll() => selected = courses.Select(c => c.Id).ToHashSet();
+
+    private void ClearAll() => selected = [];
+
+    private List<TeeTime> FilteredTimes()
+    {
+        var from = TimeOnly.TryParse(fromTime, out var f) ? f : TimeOnly.MinValue;
+        var to = TimeOnly.TryParse(toTime, out var t) ? t : TimeOnly.MaxValue;
+        return result!.TeeTimes
+            .Where(x => TimeOnly.FromDateTime(x.StartTime) >= from && TimeOnly.FromDateTime(x.StartTime) <= to)
+            .OrderBy(x => x.StartTime)
+            .ToList();
+    }
+
+    private async Task SearchAsync()
+    {
+        if (selected.Count == 0)
+        {
+            errorMessage = "Select at least one course.";
+            return;
+        }
+
+        loading = true;
+        errorMessage = null;
+        try
+        {
+            var query = $"api/teetimes?date={date:yyyy-MM-dd}" +
+                        string.Concat(selected.Select(s => $"&courses={Uri.EscapeDataString(s)}"));
+            result = await Http.GetFromJsonAsync<TeeTimeSearchResult>(query);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Search failed: {ex.Message}";
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+}

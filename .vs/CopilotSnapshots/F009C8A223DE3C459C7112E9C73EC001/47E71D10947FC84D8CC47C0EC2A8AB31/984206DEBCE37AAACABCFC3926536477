@@ -1,0 +1,80 @@
+﻿using System.Text.Json;
+using TeeTimeFinder.Core.Interfaces;
+using TeeTimeFinder.Models;
+
+namespace TeeTimeFinder.Api.Services;
+
+public class GolfBackTeeTimeProvider(HttpClient http) : ITeeTimeProvider
+{
+    public BookingSystem System => BookingSystem.GolfBack;
+
+    public async Task<IReadOnlyList<TeeTime>> GetTeeTimesAsync(CourseInfo course, DateOnly date, int players, CancellationToken cancellationToken = default)
+    {
+        var url = $"https://api.golfback.com/api/v1/courses/{course.ScheduleId}/date/{date:yyyy-MM-dd}/teetimes";
+        new HttpRequestMessage(HttpMethod.Post, url)
+                {
+                    Content = new StringContent("{}", global::System.Text.Encoding.UTF8, "application/json")
+                };
+        request.Headers.Add("keyid", "PiXC6JJ2h6GYfkzm3DV0o55qazMFDmIq");
+        request.Headers.Add("Origin", "https://golfback.com");
+        request.Headers.Add("Referer", "https://golfback.com/");
+        using var response = await http.SendAsync(request, cancellationToken);
+        response.EnsureSuccessStatusCode();
+
+        using var doc = await JsonDocument.ParseAsync(await response.Content.ReadAsStreamAsync(cancellationToken), cancellationToken: cancellationToken);
+        var results = new List<TeeTime>();
+        if (!doc.RootElement.TryGetProperty("data", out var data) || data.ValueKind != JsonValueKind.Array)
+        {
+            return results;
+        }
+
+        foreach (var slot in data.EnumerateArray())
+        {
+            if (slot.TryGetProperty("isAvailable", out var avail) && avail.ValueKind == JsonValueKind.False)
+            {
+                continue;
+            }
+
+            if (!slot.TryGetProperty("localDateTime", out var ldt) || !ldt.TryGetDateTime(out var start))
+            {
+                continue;
+            }
+
+            var spots = JsonHelper.GetInt(slot, "playersMax");
+            var min = JsonHelper.GetInt(slot, "playersMin");
+            if (spots < players || (min > players && min > 0))
+            {
+                continue;
+            }
+
+            decimal? price = null;
+            var holes = 0;
+            if (slot.TryGetProperty("rates", out var rates) && rates.ValueKind == JsonValueKind.Array)
+            {
+                foreach (var rate in rates.EnumerateArray())
+                {
+                    var p = JsonHelper.GetDecimal(rate, "price");
+                    var h = JsonHelper.GetInt(rate, "holes");
+                    if (p.HasValue && (price is null || (h == 18 && holes != 18) || (h == holes && p < price)))
+                    {
+                        price = p;
+                        holes = h;
+                    }
+                }
+            }
+
+            results.Add(new TeeTime
+            {
+                CourseId = course.Id,
+                CourseName = course.Name,
+                StartTime = DateTime.SpecifyKind(start, DateTimeKind.Unspecified),
+                AvailableSpots = spots,
+                Holes = holes,
+                Price = price,
+                BookingUrl = course.BookingUrl
+            });
+        }
+
+        return results;
+    }
+}

@@ -1,0 +1,12 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Blazor Template</h1>
+
+<p>
+    This is a starter template with three projects: <strong>Api</strong> (host and controllers),
+    <strong>Client</strong> (WebAssembly pages and components) and <strong>Core</strong> (shared models and interfaces).
+</p>
+
+<p>See the <a href="sample">Sample</a> page for an example of calling an Api controller from the Client.</p>

@@ -1,0 +1,34 @@
+﻿namespace TeeTimeFinder.Models;
+
+public enum BookingSystem
+{
+    Chronogolf,
+    ForeUp,
+    TeeItUp,
+    CpsGolf,
+    EagleClub,
+    GolfBack
+}
+
+public class CourseInfo
+{
+    public string Id { get; set; } = string.Empty;
+
+    public string Name { get; set; } = string.Empty;
+
+    public BookingSystem System { get; set; }
+
+    /// <summary>ForeUP: course id. Chronogolf: club id.</summary>
+    public string ExternalId { get; set; } = string.Empty;
+
+    /// <summary>ForeUP: schedule id. Chronogolf: course id. TeeItUp: facility id. GolfBack: course UUID.</summary>
+    public string ScheduleId { get; set; } = string.Empty;
+
+    /// <summary>TeeItUp: subdomain alias (e.g. grand-valley-state-university).</summary>
+    public string? Alias { get; set; }
+
+    /// <summary>ForeUP: booking class id (public class).</summary>
+    public string? BookingClassId { get; set; }
+
+    public string BookingUrl { get; set; } = string.Empty;
+}
