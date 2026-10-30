@@ -34,6 +34,20 @@
     padding: 1.5rem 1.25rem 3rem;
 }
 
+@media (max-width: 640px) {
+    .app-header-inner {
+        padding: .7rem .9rem;
+    }
+
+    .app-title {
+        font-size: 1.15rem;
+    }
+
+    .app-main {
+        padding: .9rem .75rem 2rem;
+    }
+}
+
 #blazor-error-ui {
     color-scheme: light only;
     background: lightyellow;

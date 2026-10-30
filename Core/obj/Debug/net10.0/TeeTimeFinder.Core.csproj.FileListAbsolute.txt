@@ -21,3 +21,5 @@ C:\ReposLocal\TeeTimeFinder\Core\obj\Debug\net10.0\TeeTimeFinder.Core.dll
 C:\ReposLocal\TeeTimeFinder\Core\obj\Debug\net10.0\refint\TeeTimeFinder.Core.dll
 C:\ReposLocal\TeeTimeFinder\Core\obj\Debug\net10.0\TeeTimeFinder.Core.pdb
 C:\ReposLocal\TeeTimeFinder\Core\obj\Debug\net10.0\ref\TeeTimeFinder.Core.dll
+C:\ReposLocal\TeeTimeFinder\Core\obj\Debug\net10.0\TeeTimeFinder.Core.sourcelink.json
+C:\ReposLocal\TeeTimeFinder\Core\obj\Debug\net10.0\TeeTimeF.E360EF71.Up2Date
